@@ -42,6 +42,16 @@
 // let name = prompt("Introduzca su nombre:");
 // alert(name);
 
-let name = prompt("What is the official name of javascript");
-if (name == "ECMAScript") alert("Correcto");
-else alert("Error");
+// let name = prompt("What is the official name of javascript");
+// if (name == "ECMAScript") alert("Correcto");
+// else alert("Error");
+
+// let value = prompt('Type a number', 0);
+// if (value > 0)
+//   alert( 1 );
+// else if (value < 0)
+//   alert( -1 );
+// else
+//   alert( 0 );
+
+result = a + b < 4 ? "Below" : "Over";
