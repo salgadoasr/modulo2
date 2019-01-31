@@ -3,6 +3,9 @@
  * practicar Javascript!
  */
 
+
+// Logical operators //
+
 // let age = prompt("Introduce tu edad");
 
 // if (age >= 14 && age <= 90) alert("La edad es correcta");
@@ -59,7 +62,7 @@
 // checkUser(user);
 
 // function checkVoid(parametro) {
-//   if (parametro == "") return prompt("No dejes el campo el blanco");
+    //   if (parametro == "") return prompt("No dejes el campo el blanco");
 //   else {
 //     alert("Wrong password");
 //     return parametro;
@@ -89,13 +92,17 @@
 // let password;
 // checkUser(user);
 
-function ask(question, yes, no) {
-  if (confirm(question)) yes();
-  else no();
-}
+// Function expressions and arrows //
 
-ask(
-  "Do you agree?",
-  () => alert("You agreed."),
-  () => alert("You canceled the execution.")
-);
+
+// function ask(question, yes, no) {
+//   if (confirm(question)) yes();
+//   else no();
+// }
+
+// ask(
+//   "Do you agree?",
+//   () => alert("You agreed."),
+//   () => alert("You canceled the execution.")
+// );
+
