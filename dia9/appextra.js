@@ -15,46 +15,46 @@
  * y lo analice tambien y asi sucesivamente. (Pista: RECURSIVIDAD)
  */
 
-// class Persona {
-//   constructor(name, pareja, fecha) {
-//     this.name = name;
-//     this.pareja = pareja;
-//     this.objeto = fecha;
-//   }
+class Persona {
+  constructor(name, pareja, fecha) {
+    this.name = name;
+    this.pareja = pareja;
+    this.objeto = fecha;
+  }
 
-//   showProperties() {
-//     let objeto = this;
-//     let objetoAnidado;
-//     do {
-//       objetoAnidado = false;
-//       for (let prop in objeto) {
-//         if (prop == "objeto") {
-//           objeto = prop;
-//           objetoAnidado = true;
-//         } else {
-//           console.log(
-//             prop +
-//               " contiene " +
-//               this[prop] +
-//               " con una logitud de  " +
-//               this[prop].length
-//           );
-//         }
-//       }
-//     } while (objetoAnidado == true);
-//   }
+  showProperties(persona) {
+    let objeto = persona;
+    let objetoAnidado;
+    do {
+      objetoAnidado = false;
+      for (let prop in objeto) {
+        if (typeof prop == "object") {
+          objeto = prop;
+          objetoAnidado = true;
+        } else {
+          console.log(
+            prop +
+              " contiene " +
+              this[prop] +
+              " con una logitud de  " +
+              this[prop].length
+          );
+        }
+      }
+    } while (objetoAnidado == true);
+  }
 
-//   static checkMarried(persona1, persona2) {
-//     let persona1Lower = persona1.name.toLowerCase();
-//     let persona2Lower = persona2.pareja.toLowerCase();
-//     if (persona1Lower == persona2Lower) return true;
-//     else return false;
-//   }
-// }
+  static checkMarried(persona1, persona2) {
+    let persona1Lower = persona1.name.toLowerCase();
+    let persona2Lower = persona2.pareja.toLowerCase();
+    if (persona1Lower == persona2Lower) return true;
+    else return false;
+  }
+}
 
-// let persona1 = new Persona("alberto", "raquel", new Date());
-// let persona2 = new Persona("raquel", "Alberto", new Date());
+let persona1 = new Persona("alberto", "raquel", new Date());
+let persona2 = new Persona("raquel", "Alberto", new Date());
 
-// if (Persona.checkMarried(persona1, persona2))
-//   console.log(persona2.name + " es marido/mujer de " + persona1.name);
-// persona1.showProperties();
+if (Persona.checkMarried(persona1, persona2))
+  console.log(persona2.name + " es marido/mujer de " + persona1.name);
+persona1.showProperties(persona1);
